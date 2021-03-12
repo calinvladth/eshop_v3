@@ -1,0 +1,71 @@
+@import '../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+
+.boxContent
+    width: 100%
+    max-width: $standard_max_width
+    margin: 0 auto
+
+    position: relative
+
+    @include md
+        padding: 0 $padding
+
+    @include xsm
+        padding: 0 $padding-sm
+
+    > div
+        &:nth-child(2)
+            margin-top: $section_margin
+
+.boxProducts
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr))
+
+    border-left: .1rem solid $black
+    position: relative
+
+    @include sm
+        grid-template-columns: repeat(2, 1fr)
+
+    &:before
+        content: ''
+        position: absolute
+        width: 100vw
+        height: 100%
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        border-top: .1rem solid $black
+        //border-bottom: .1rem solid $black
+
+    > div
+        display: block
+        width: 100%
+        height: auto
+
+        border-right: .1rem solid $black
+
+        position: relative
+
+        padding: 2.5rem
+
+        @include sm
+            padding: $padding-sm
+
+        &:before
+            content: ''
+            position: absolute
+            width: 200vw
+            height: 100%
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            border-bottom: .1rem solid black
+
+    > p
+        font-size: 1.6rem

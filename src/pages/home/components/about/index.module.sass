@@ -1,0 +1,68 @@
+@import "../../../../assets/style/index"
+
+.box
+    width: 100%
+    height: auto
+    background-color: $angel
+
+    * h1
+        font-size: 2.5rem
+
+    * p
+        font-size: 1.6rem
+
+    * h2
+        font-family: $font_title
+        font-size: 2rem
+
+.boxContent
+    $side_size: auto
+    max-width: $standard_max_width
+    width: 100%
+    height: auto
+    margin: 0 auto
+
+    display: grid
+    grid-template-columns: $side_size 1fr $side_size
+
+    > div
+        text-align: center
+        padding: 0 .5rem
+
+        &:nth-child(1)
+            text-orientation: mixed
+            writing-mode: vertical-lr
+
+            > h2
+                position: relative
+                transform: rotate(180deg)
+
+        &:nth-child(2)
+            padding: calc(#{$section_margin} / 2) calc(#{$section_margin} * 2)
+
+            @include md
+                padding: calc(#{$section_margin} / 2) calc(#{$section_margin} * 1)
+
+            @include sm
+                padding: calc(#{$section_margin} / 2) calc(#{$section_margin} * .25)
+
+
+
+        &:nth-child(3)
+            text-orientation: mixed
+            writing-mode: vertical-rl
+
+
+.boxText
+    width: 100%
+    height: auto
+    padding: $section_margin 0
+
+    //@include md
+    //    padding: $section_margin 3rem
+    //
+    //@include sm
+    //    padding: $section_margin 1rem
+
+    > h1
+        margin-bottom: 1.5rem

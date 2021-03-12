@@ -1,0 +1,114 @@
+@import '../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+    color: $black
+
+.boxContent
+    width: 100%
+    max-width: $standard_max_width
+    height: $header_height
+    margin: 0 auto
+
+    display: flex
+    justify-content: space-between
+
+    @include md
+        grid-template-columns: 1fr
+        padding: 0 $padding
+
+    @include xsm
+        padding: 0 $padding-sm
+
+    * span
+        font-size: 1.7rem
+        text-transform: lowercase
+
+
+.pages
+    width: 100%
+    height: auto
+
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+    > div
+        height: $header_height
+        margin-left: 2.5rem
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        &:nth-child(1)
+            margin-left: 0
+
+    @include sm
+        > div
+            margin-left: 1.75rem
+
+
+.linkActive
+    position: relative
+
+    &:before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -80%)
+
+        width: 70%
+        height: 100%
+
+        border-bottom: .1rem solid $black
+
+
+.icons
+    width: auto
+    height: auto
+    margin-left: 2.5rem
+
+    @include sm
+        margin-left: 1.75rem
+
+.iconCart
+    width: 3.5rem
+    height: $header_height
+
+    padding: .6rem
+
+    position: relative
+    z-index: 1000
+
+    > span
+        position: absolute
+        top: 10%
+        right: 0
+
+        background-color: red
+
+        min-width: 2.25rem
+        width: auto
+        height: 2rem
+        font-size: 1.3rem
+        border-radius: 50%
+        color: $white
+
+        padding: .25rem
+
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+
+
+
+
+
+
+
+

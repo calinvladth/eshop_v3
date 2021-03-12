@@ -1,0 +1,60 @@
+@import '../../../../assets/style/index'
+
+$productbox_margin: 100px
+$productbox_width: calc(#{$standard_max_width} / 3 - (#{$productbox_margin} / 2))
+$productbox_height: calc(#{$productbox_width} * 1.4)
+
+.box
+    width: 100%
+    height: auto
+
+    @include md
+        padding: 0 $padding
+
+    @include xsm
+        padding: 0 $padding-sm
+
+.boxContent
+    width: 100%
+    height: auto
+
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(34rem, 1fr))
+
+    position: relative
+
+    @include sm
+        grid-template-columns: repeat(2, 1fr)
+
+
+    border-left: .1rem solid $black
+
+
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        width: 100vw
+        height: 100%
+
+        border-top: .1rem solid $black
+        border-bottom: .1rem solid $black
+
+
+    > div
+        width: 100%
+        height: auto
+        padding: 3rem
+
+        border-right: .1rem solid $black
+        border-bottom: .1rem solid $black
+
+        @include xsm
+            padding: $padding-sm
+
+        &:nth-last-child(1)
+            @include md
+                display: none
+
