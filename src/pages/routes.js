@@ -52,7 +52,6 @@ const Routes = () => {
                     {/*<Route path={PrivacyPath} component={Privacy}/>*/}
                     {/*<Route path={TermsPath} component={Terms}/>*/}
 
-
                     {/*404*/}
                     {/*<Route component={FOF}/>*/}
                     <Route path="/404"><NotFoundPage/></Route>
