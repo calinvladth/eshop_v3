@@ -1,9 +1,10 @@
 import React from 'react'
 import style from './index.module.sass'
-import {headerData, homepageData} from "../../../../data";
+import {homepageData} from "../../../../data";
 import {setBackgroundImage} from "../../../../services/image";
 import {useHistory} from "react-router";
 import {ShopPath} from "../../index";
+import LogoComponent from "../../../../components/logo";
 
 const HeroComponent = () => {
     const history = useHistory()
@@ -13,10 +14,8 @@ const HeroComponent = () => {
 
                 <div className={style.boxHero} style={setBackgroundImage(homepageData.hero_image)}>
 
-                    <div className={style.boxLogo}>
-                        <div>
-                            <img src={headerData.logo_light} alt=""/>
-                        </div>
+                    <div>
+                        <LogoComponent/>
                     </div>
                     <div className={style.boxText}>
                         <div>

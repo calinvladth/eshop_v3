@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import style from './index.module.sass'
 import {Link, useLocation} from "react-router-dom";
 import {HomePath, ShopPath} from "../../pages/home";
@@ -6,11 +6,19 @@ import {ContactPath} from "../../pages/contact/path";
 import {CartPath} from "../../pages/cart/path";
 import {useSelector} from "react-redux";
 import CartSvg from "../../assets/icons/cart";
+import LogoComponent from "../logo";
 
 const HeaderComponent = () => {
     const location = useLocation()
+    const [showLogo, setShowLogo] = useState(false)
 
     const cart = useSelector(state => state.cart)
+
+    useEffect(() => {
+        if (location.pathname === HomePath || location.pathname === ContactPath) setShowLogo(false)
+        else setShowLogo(true)
+
+    }, [location])
 
     return (
         <header className={style.box}>
@@ -54,6 +62,9 @@ const HeaderComponent = () => {
                     </div>
                 </div>
             </div>
+            {
+                showLogo && <LogoComponent light={false}/>
+            }
         </header>
     )
 }

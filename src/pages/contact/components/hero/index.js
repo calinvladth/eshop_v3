@@ -1,7 +1,8 @@
 import React from "react";
 import style from './index.module.sass'
 import {setBackgroundImage} from "../../../../services/image";
-import {contactData, contactpageData, headerData} from "../../../../data";
+import {contactData, contactpageData} from "../../../../data";
+import LogoComponent from "../../../../components/logo";
 
 const HeroComponent = () => (
     <div className={style.box}>
@@ -9,10 +10,8 @@ const HeroComponent = () => (
 
             <div className={style.boxHero} style={setBackgroundImage(contactpageData.image)}>
 
-                <div className={style.boxLogo}>
-                    <div>
-                        <img src={headerData.logo_light} alt=""/>
-                    </div>
+                <div>
+                    <LogoComponent/>
                 </div>
                 <div className={style.boxText}>
                     <div>

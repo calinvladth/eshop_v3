@@ -1,0 +1,35 @@
+@import "../../assets/style/index"
+
+.boxLogo
+    height: 35vh
+    min-height: 20rem
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    padding-bottom: $padding
+
+    @include md
+        min-height: 10rem
+        height: 30vh
+
+    @include sm
+        align-items: center
+        padding-bottom: 0
+
+    > div
+        width: 22.5vw
+        max-width: 30rem
+        min-height: 5rem
+
+        @include md
+            width: 30vw
+
+        @include sm
+            width: 35vw
+
+        @include xsm
+            width: 37.5vw
+
+        > img
+            width: 100%
+            max-height: 100%

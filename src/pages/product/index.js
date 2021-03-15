@@ -51,6 +51,7 @@ const ProductPage = () => {
                         <DescriptionAndSpecs
                             description={product.data.description_long}
                             specs={product.data.specs}
+                            category={product.data.category}
                         />
                     </section>
 
