@@ -16,7 +16,7 @@ export const headerData = {
 
 export const homepageData = {
     hero_image: HomeHero,
-    hero_title: 'Timeless pieces for your exquisite taste, handrafted with care and possetion. \nBrowse our collections now.',
+    hero_title: 'Timeless pieces for your exquisite taste, handrafted with care and passion. \nBrowse our collections now.',
     hero_shop_button: 'start shopping',
     spinner: Spinner,
     about_slogan: 'about us',
